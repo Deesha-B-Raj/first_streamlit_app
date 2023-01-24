@@ -1,5 +1,8 @@
 import streamlit
 import pandas #for reading the s3 bucket file
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response)
 
 streamlit.title("My Mom's New Healthy Diner")
 
