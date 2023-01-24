@@ -1,8 +1,6 @@
 import streamlit
 import pandas #for reading the s3 bucket file
 import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_response)
 
 streamlit.title("My Mom's New Healthy Diner")
 
@@ -22,3 +20,6 @@ fruits_to_show = my_fruit_list.loc[fruits_selected] #we are locating the fruits 
 
 # Display the table on the page.
 streamlit.dataframe(fruits_to_show)#displaying the selected fruits data 
+
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response)
